@@ -1,8 +1,11 @@
 # Digital-Signal-Processing--Convolution
+
 ## Aim:
-                  To perform linear convolution using MAT LAB.
+To perform linear convolution using MAT LAB.
+
 ## Software Required:
 MAT LAB R2012
+
 ## Algorithm:
 Step 1: Open mat lab. Write the program.
 
@@ -20,9 +23,48 @@ Step 7: Terminate the program.
 
 ## PROGRAM: 
 
+```
+clc; % clear screen
+clear all; % clear screen
+close all; % close all figure windows
+% INPUT SEQUENCE
+a=input('enter the starting x(n)');
+x=input('enter the x(n) sequence');
+n=a:1:length(x)+a-1;
+figure(1);
+stem(n,x);
+xlabel('time');
+ylabel('amplitude');
+title('input sequence');
+% IMPULSE SEQUENCE
+b=input('enter the starting h(n)');
+y=input('enter the h(n) sequence');
+m=b:1:length(y)+b-1;
+figure(2);
+stem(m,y);
+xlabel('time');
+ylabel('amplitude');
+title('impulse response')
+% LINEAR CONVOLUTION
+z=conv2(x,y);
+n1=a+b:1:length(z)+a+b-1;
+figure(3);
+stem(n1,z);
+xlabel('time');
+ylabel('amplitude');
+title( 'linear convolution');
+```
+## CALCULATION:
+
+![WhatsApp Image 2025-11-28 at 12 36 49 PM](https://github.com/user-attachments/assets/8c6cc8f3-f5c8-4165-ad43-00f4090b324e)
 
 ## OUTPUT:
 
+<img width="1280" height="718" alt="image" src="https://github.com/user-attachments/assets/f033459e-041f-4cee-bca8-d42591ce9cf9" />
 
 ## RESULT:
+<img width="1280" height="745" alt="image" src="https://github.com/user-attachments/assets/a50582fe-1102-4b1c-a02a-fa919ec85b8d" />
+
+
+
 
